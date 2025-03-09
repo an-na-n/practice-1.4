@@ -1,0 +1,248 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TTLakesRegular"),
+    url("../fonts/TTLakesRegular.woff2") format("woff2"),
+    url("../fonts/TTLakesRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TTLakesMedium"),
+    url("../fonts/TTLakesMedium.woff2") format("woff2"),
+    url("../fonts/TTLakesMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TTLakesBold"), url("../fonts/TTLakesBold.woff2") format("woff2"),
+    url("../fonts/TTLakesBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --white: #fff;
+  --black: #1b1c21;
+  --gray: #7e7e82;
+  --lightGray: #f8f8f8;
+  --pink: #ff3e79;
+  --blue: #41f6d7;
+  --lightBlue: #b8ffec;
+  --babyBlue: #d9fff5;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  color: var(--black);
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "TT Lakes", sans-serif;
+}
+
+.mob-menu {
+  max-width: 320px;
+  min-height: 1024px;
+  box-shadow: 16px 0 52px #0e185033;
+}
+
+.menu-header {
+  margin-bottom: 50px;
+  padding: 23px 24px 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-header__logo {
+  max-width: 97px;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 12px 11px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--pink);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.menu-button:hover {
+  opacity: 0.7;
+}
+
+.menu-header__button--close {
+  margin-right: 17px;
+  background-image: url(/images/menu-header__button--close--svg.svg);
+}
+
+.menu-header__button--search {
+  margin-left: auto;
+  background-image: url(/images/menu-header__button--search--svg.svg);
+}
+
+.menu-list {
+  margin-bottom: 268px;
+}
+
+.menu-list__item {
+  margin-bottom: 22px;
+  padding: 10px 0 10px 24px;
+}
+
+.menu-list__item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.menu-list__item--active {
+  color: var(--gray);
+  background: url(images/menu-list__item--active--svg.svg) no-repeat left center;
+}
+
+.menu-list__link {
+  position: relative;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.menu-list__link::after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--blue);
+  transform: translate(-50%);
+  transition: width 0.5s ease-in-out;
+}
+
+.menu-list__link:hover::after {
+  width: 100%;
+}
+
+.menu-contacts {
+  margin-bottom: 40px;
+  padding-left: 24px;
+}
+
+.menu-contacts__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.menu-contacts__button--call {
+  margin-right: 16px;
+  background-image: url(images/menu-contacts__button--call--svg.svg);
+}
+
+.menu-contacts__button--chat {
+  margin-right: 16px;
+  background-image: url(images/menu-contacts__button--chat--svg.svg);
+}
+
+.menu-contacts__button--profile {
+  background-image: url(images/menu-contacts__button--profile--svg.svg);
+}
+
+.menu-contacts__link {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.menu-contacts__link:hover {
+  opacity: 0.6;
+}
+
+.menu-contacts__link--email {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.menu-contacts__link--tel {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu-lang {
+  padding-left: 24px;
+  padding-bottom: 32px;
+}
+
+.menu-lang__button {
+  margin-right: 7px;
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.menu-lang__button:hover {
+  opacity: 0.6;
+}
+
+.menu-lang__button--active {
+  color: var(--gray);
+}
+
+.menu-lang__button--active:hover {
+  opacity: 1;
+}
